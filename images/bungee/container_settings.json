@@ -1,0 +1,6 @@
+{
+  "Image": "bungee",
+  "HostConfig": {
+    "PortBindings":{ "25577/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "25577" }] }
+  }
+}

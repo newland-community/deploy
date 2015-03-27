@@ -1,6 +1,7 @@
 {
-  "_comment" : "FOR DETAILED FORMAT LOOK AT https://docs.docker.com/reference/api/docker_remote_api_v1.16/#create-a-container",
+  "Image": "minecraft_main",
   "HostConfig": {
-    "PortBindings":{ "25565/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "25565" }] }
+    "Links": ["bungee:bungee"],
+    "PortBindings":{ "25565/tcp": [{ "HostIp": "0.0.0.0", "HostPort": "25567" }] }
   }
 }

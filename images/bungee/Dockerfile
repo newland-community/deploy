@@ -9,14 +9,11 @@ RUN pacman -Sc --noconfirm
 RUN pacman -Syu --noconfirm --ignore filesystem
 RUN pacman-db-upgrade
 RUN pacman -S jdk7-openjdk git fontconfig --noconfirm
-RUN mkdir -p /opt/spigot && curl -o /opt/spigot/BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-RUN cd /opt/spigot/ && java -jar BuildTools.jar
-RUN mkdir /opt/server/
-COPY files/start.sh /opt/server/
-RUN chmod +x /opt/server/start.sh
-COPY files/eula.txt /opt/server/
-COPY files/server.properties /opt/server/
+RUN mkdir -p /opt/bungeecord && curl -o /opt/bungeecord/BungeeCord.jar http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+COPY files/start.sh /opt/bungeecord/
+COPY files/config.yml /opt/bungeecord/
+RUN chmod +x /opt/bungeecord/start.sh
 
-EXPOSE 25565
+EXPOSE 25577
 
-CMD ["/opt/server/start.sh"]
+CMD ["/opt/bungeecord/start.sh"]
