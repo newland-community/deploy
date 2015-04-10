@@ -31,7 +31,7 @@ timeout: 30000
 connection_throttle: 4000
 servers:
   lobby:
-    address: localhost:25567
+    address: jaalon.org:25567
     restricted: false
     motd: '&1Just another BungeeCord - Forced Host'
 ip_forward: false
