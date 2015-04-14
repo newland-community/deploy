@@ -1,4 +1,2 @@
 - Build à l'extérieur du conteneur
-- Pointer pour la map et les plugins vers un autre répertoire
-- Exporter le fs de travail docker vers un répertoire dédié à l'image
 - Tester l'intégration du plugin de tomroch
